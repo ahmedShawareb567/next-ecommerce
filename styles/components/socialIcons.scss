@@ -1,0 +1,21 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
+  a {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2rem;
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.header {
+  padding: 3rem 0rem;
+  transition: all 0.2s ease-in-out;
+  &-logo {
+    color: $primary;
+    @include media-breakpoint-down(sm) {
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+  &-search {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    margin: 0rem auto;
+    input[type="search"] {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .icon {
+      &-left,
+      &-right {
+        position: absolute;
+        top: 0.6rem;
+        left: 1rem;
+        svg {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+      &-right {
+        left: auto;
+        right: 1rem;
+      }
+    }
+  }
+  &-details {
+    display: flex;
+    justify-content: flex-end;
+    ul {
+      list-style: none;
+      padding: 0rem;
+      margin: 0rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        margin: 0.2rem;
+        a {
+          position: relative;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include media-breakpoint-down(lg) {
+            width: 2rem;
+            height: 2rem;
+          }
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            @include media-breakpoint-down(lg) {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+          span {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.3rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background-color: $primary;
+            text-align: center;
+            line-height: 1.2rem;
+            font-size: 0.7rem;
+            color: $white;
+          }
+        }
+        &.overlay {
+          a {
+            background-color: #efefef;
+          }
+        }
+      }
+      &:last-child {
+        margin-left: 2rem;
+        @include media-breakpoint-down(sm) {
+          margin-left: 0rem;
+        }
+      }
+    }
+  }
+}
+
+// HEADROOM.JS :)
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+  .header {
+    padding: 3rem 0rem;
+  }
+}
+.headroom--scrolled {
+  background-color: $white;
+  .header {
+    box-shadow: 0rem 0rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+  }
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+  padding: 1.5rem 0rem;
+  .header {
+    padding: 1.5rem 0rem;
+  }
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  .header {
+    padding: 1.5rem 0rem;
+  }
+}

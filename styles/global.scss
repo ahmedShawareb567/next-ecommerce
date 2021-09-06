@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "./fonts";
+@import "./bootstrap";
+@import "./utils";
+@import "./libs";
+@import "./components/Btn.scss";
+@import "./components/Input.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/socialIcons.scss";
+@import "./components/CategoriesSwiper.scss";
+@import "./components/AppCard.scss";
+@import "./components/cartItem.scss";
+@import "./components/counter.scss";
+
+// libs
+@import "./overide.scss";
+@import "./pages/index.scss";
+
+body {
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  ::-moz-selection {
+    background: $secondary;
+  }
+
+  ::selection {
+    background: $secondary;
+  }
+  font-size: 16px;
+}

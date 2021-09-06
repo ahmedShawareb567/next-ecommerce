@@ -1,0 +1,23 @@
+.intro {
+  width: 95%;
+  height: auto;
+  background-color: $primary;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+    -135deg,
+    rgba(249, 249, 249, 0.2) 4.6%,
+    rgba(148, 148, 148, 0.4) 30.2%,
+    rgba(4, 4, 4, 0.4) 100%
+  );
+  overflow-x: hidden;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+  &-text {
+    padding: 4rem 20rem 4rem 4rem;
+    @include media-breakpoint-down(xl) {
+      padding: 4rem 3rem;
+    }
+  }
+}

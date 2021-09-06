@@ -1,0 +1,136 @@
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  color: $dark;
+  text-align: center;
+  line-height: 18px;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  background-color: $primary;
+  border: 1px solid $white;
+  font-size: rem(18px);
+  font-weight: 600;
+  border-radius: $border-radius;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  svg {
+    margin: 0.3rem;
+  }
+
+  @include transition($btn-transition);
+  &:focus {
+    outline: 0;
+  }
+  &-primary {
+    background: $primary;
+    color: $white;
+    padding: 1.5rem 2rem;
+    &-rounded {
+      border-radius: rem(15px);
+      color: $white;
+      &:hover {
+        background: transparent;
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+    &:hover {
+      background: transparent;
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+  &-white {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $primary;
+    }
+  }
+  &-secondary {
+    background: $danger;
+    color: $white;
+    &:hover {
+      background-color: transparent;
+      border-color: $danger;
+      color: $danger;
+    }
+  }
+  &-warning {
+    background: $warning;
+    color: $white;
+    &:hover {
+      background: darken($warning, 10%);
+      color: $white;
+    }
+  }
+  &-success {
+    background: $success;
+    color: $white;
+    &:hover {
+      background: darken($success, 10%);
+      color: $white;
+    }
+  }
+  &-danger {
+    background: $danger;
+    color: $white;
+    border-color: $danger;
+    &:hover {
+      background-color: transparent;
+      color: $danger;
+    }
+  }
+  &-light {
+    background: #e4fcf9;
+    color: $primary;
+    &:hover {
+      background: #e4fcf9;
+      color: $primary;
+    }
+  }
+  &-outline {
+    border: 2px solid $secondary;
+    height: auto !important;
+    width: auto !important;
+    padding: 1rem;
+    background-color: transparent;
+    color: $secondary;
+    line-height: 1rem;
+    margin: 0.2rem;
+    &:hover {
+      background: $secondary;
+      color: $white;
+    }
+  }
+  &-link {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &.is-wide {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

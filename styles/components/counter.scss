@@ -1,0 +1,24 @@
+.counter {
+  width: 100px;
+  height: 40px;
+  border: 1px solid $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+  button {
+    height: 100%;
+    width: 40%;
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    font-size: 22px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
